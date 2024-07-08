@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  
+  header h2 {
+    font-size: 18px;
+    color: #666;
+    margin-top: 0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li:before {
+    content: "•";
+    margin-right: 10px;
+    color: #666;
+  }
+  
+  #summary {
+    text-align: justify;
+  }
+  
+  #skills {
+    text-align: center;
+  }
+  
+  #education {
+    text-align: center;
+  }
+  
+   ri-icon {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  header, section {
+    border-bottom: 2px solid #666;
+  }
+  
+  header h1, section h2 {
+    color: #d3169a;
+  }
+  
+  ul li:before {
+    color: #333;
+  }
+  

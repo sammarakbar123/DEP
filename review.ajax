@@ -1,0 +1,16 @@
+$('#review-form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        url: 'add_review.php',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(response) {
+            if (response.status === 'success') {
+                alert('Review submitted successfully!');
+            } else {
+                alert('Failed to submit review.');
+            }
+        }
+    });
+});

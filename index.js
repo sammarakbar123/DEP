@@ -1,89 +1,36 @@
-let navbar = document.querySelector('.navbar');
-document.querySelector('#menu-bar').onclick = () => {
-    navbar.classList.toggle('active');
-};
+const express = require("express");
+const app = express();
+const http = require("http");
+const cors = require("cors");
+const { Server } = require("socket.io");
+app.use(cors());
 
-let searchIcon = document.querySelector('#search');
-let searchBox = document.querySelector('.search');
-searchIcon.onclick = () => {
-    searchBox.classList.toggle('active');
-};
+const server = http.createServer(app);
 
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
 
-var swiper = new Swiper(".product-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:true,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-var swiper = new Swiper(".blogs-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:true,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation:{
-        nextE1 :".swiper-button-next",
-        prevE1 :".swiper-button-prev",
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
+io.on("connection", (socket) => {
+  console.log(`User Connected: ${socket.id}`);
+
+  socket.on("join_room", (data) => {
+    socket.join(data);
+    console.log(`User with ID: ${socket.id} joined room: ${data}`);
   });
 
-  var swiper = new Swiper(".review-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:true,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
+  socket.on("send_message", (data) => {
+    socket.to(data.room).emit("receive_message", data);
   });
+
+  socket.on("disconnect", () => {
+    console.log("User Disconnected", socket.id);
+  });
+});
+
+server.listen(3001, () => {
+  console.log("SERVER RUNNING");
+});

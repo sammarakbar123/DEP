@@ -1,365 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Cake Bakery</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="logoContent">
-            <a href="#" class="logo"><img src="logo.png" alt=""></a>
-            <h1 class="logoName">Sweet Cake Bakery </h1>
-        </div>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#product">product</a>
-            <a href="#blogs">blogs</a>
-            <a href="#review">review</a>
-            <a href="#contact">contact</a>
-        </nav>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-        <div class="icon">
-            <i class="fas fa-search" id="search"></i>
-            <i class="fas fa-bars" id="menu-bar"></i>
-        </div>
-
-        <div class="search">
-            <input type="search" placeholder="search...">
-        </div>
-    </header>
-    <section class="home" id="home">
-        <div class="homeContent">
-            <h2>Delicious Cake for Everyone </h2>
-            <p>Welcome to Sweet Cake Bakery! We love making cakes that taste great and look amazing. Our team works hard to create special cakes for weddings, birthdays, and more. We have many flavors and designs to choose from. Come visit us and try a slice!<p>
-            <div class="home-btn">
-                <a href="#"><button>see more</button></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- home section end here  -->
-
-    <!-- product section start here  -->
-    <section class="product" id="product">
-        <div class="heading">
-            <h2>Our Exclusive Products</h2>
-        </div>
-        <div class="swiper product-row">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Moist and delicious, our chocolate cake is a chocolate lover's dream.
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Our chocolate cake is rich and delicious. Made with dark chocolate and creamy frosting, it's a treat for anyone who loves chocolate.
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Try a slice today and taste the difference for yourself.
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake2.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Rich, decadent, and made with love. Our chocolate cake is the perfect treat. Come indulge!
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="swiper product-row">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Try a slice today and taste the difference for yourself..
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Try a slice today and taste the difference for yourself..
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake1.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Try a slice today and taste the difference for yourself..
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="img">
-                        <img src="cake2.png" alt="">
-                    </div>
-                    <div class="product-content">
-                        <h3>Chocolate</h3>
-                        <p>Rich, decadent, and made with love. Our chocolate cake is the perfect treat. Come indulge!
-                        </p>
-                        <div class="orderNow">
-                            <button>Order Now </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <!-- product section end here  -->
-
-    <!-- blogs section start here  -->
-    <section class="blogs" id="blogs">
-
-        <div class=" swiper blogs-row">
-            <div class="swiper-wrapper">
-                <div class=" swiper-slide box">
-                    <div class="img">
-                        <img src="blog-img1.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Caramel Bourbon Vanilla Cupcakes </h3>
-                        <p>"Indulge in our Caramel Bourbon Vanilla Cupcakes, where vanilla, bourbon, and caramel come together in perfect harmony. Moist vanilla cake, rich caramel frosting, and a hint of bourbon make these treats unforgettable. Try one today!"</p>
-                        <p>With a hint of bourbon and a drizzle of caramel, these cupcakes take vanilla to the next level. Try one and taste the difference for yourself!.</p>
-                        <a href="#blogs" class="btn">learn more</a>
-                    </div>
-                </div>
-                <div class=" swiper-slide box">
-                    <div class="img">
-                        <img src="blog-img2.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Caramel Bourbon Vanilla Cupcakes </h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum voluptatum
-                            corporis accusamus aperiam fugiat tempora blanditiis labore dolor aliquid maxime nobis
-                            laborum sed soluta voluptatibus aspernatur natus, dicta quisquam.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam ab ullam reiciendis sint
-                            eaque at.</p>
-                        <a href="#blogs" class="btn">learn more</a>
-                    </div>
-                </div>
-                <div class=" swiper-slide box">
-                    <div class="img">
-                        <img src="blog-img2.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Caramel Bourbon Vanilla Cupcakes </h3>
-                        <p>Indulge in the sweet and savory flavors of our Caramel Bourbon Vanilla Cupcakes. Your taste buds will thank you!</p>
-                        <p>Looking for a unique dessert to serve at your next gathering? Look no further than our Caramel Bourbon Vanilla Cupcakes. They're sure to be a hit!.
-                        </p>
-                        <a href="#blogs" class="btn">learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-
-
-        </div>
-    </section>
-
-    <!-- blogs section ends here  -->
-
-    <!-- newsletter section start here  -->
-
-    <section class="newsletter">
-        <form action="">
-            <h3>subscribe for latest update</h3>
-            <input type="email" name="" placeholder="enter your email" id="" class="box">
-            <input type="button" value="subscribe" class="box2">
-        </form>
-    </section>
-    <!-- newsletter section ends here  -->
-
-    <!-- review section start here  -->
-    <section class="review" id="review">
-        <div class="heading">
-            <h2>client review</h2>
-        </div>
-
-
-        <div class=" swiper review-row">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <div class="client-review">
-                        <p>Best cake I've ever had! Moist, flavorful, and visually stunning. Highly recommend!</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="img">
-                            <img src="client1.jpg" alt="">
-                        </div>
-                        <div class="clientDetailed">
-                            <h3>Hardy Devid</h3>
-                            <p>UI / UX designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="client-review">
-                        <p>I've tried several cakes from this bakery and they never disappoint. The caramel bourbon vanilla cupcake is my favorite!</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="img">
-                            <img src="client1.jpg" alt="">
-                        </div>
-                        <div class="clientDetailed">
-                            <h3>Hardy Devid</h3>
-                            <p>UI / UX designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="client-review">
-                        <p>Best cake I've ever had! Moist, flavorful, and visually stunning. Highly recommend!</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="img">
-                            <img src="client1.jpg" alt="">
-                        </div>
-                        <div class="clientDetailed">
-                            <h3>James B</h3>
-                            <p> designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <div class="client-review">
-                        <p>Best cake I've ever had! Moist, flavorful, and visually stunning. Highly recommend!</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="img">
-                            <img src="client1.jpg" alt="">
-                        </div>
-                        <div class="clientDetailed">
-                            <h3>Rachel G.</h3>
-                            <p>UI / UX </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-
-            </div>
-        </div>
-    </section>
-    <!-- review section ends here  -->
-
-    <!-- footer section start here  -->
-
-    <footer class="footer" id="contact">
-        <div class="box-container">
-            <div class="mainBox">
-                <div class="content">
-                    <a href="#"><img src="logo.png" alt=""></a>
-                    <h1 class="logoName"> Sweet Cake Bakery </h1>
-                </div>
-
-                <p>Indulge in the sweet life at our bakery, where every bite is a delight!</p>
-
-            </div>
-            <div class="box">
-                <h3>Quick link</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>product</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>blogs</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>review</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
-
-            </div>
-            <div class="box">
-                <h3>Extra link</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Account info</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>order item</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>privacy policy</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>payment method</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>our  services</a>
-            </div>
-            <div class="box">
-                <h3>Contact Info</h3>
-                <a href="#"> <i class="fas fa-phone"></i>+92 165883393</a>
-                <a href="#"> <i class="fas fa-envelope"></i>sweetcakebakery12@gmail.com</a>
-
-            </div>
-
-        </div>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-            <a href="#" class="fab fa-pinterest"></a>
-        </div>
-        <div class="credit">
-            created by <span>Mrs Sammar Akbar </span> |all rights reserved ! 
-        </div>
-    </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
-
-
-</body>
-
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
